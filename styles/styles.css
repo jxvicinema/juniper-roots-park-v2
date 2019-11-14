@@ -42,7 +42,11 @@ section {
 }
 
 .juniper-top-container .logo h1 {
-  font-size: 2.8rem;
+  font-size: 2rem;
+}
+
+.juniper-top-container .logo h1 span {
+  color: #8dff00;
 }
 
 .juniper-top-container h1 {
@@ -64,6 +68,10 @@ section {
 }
 
 .nav-container {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,11 +117,11 @@ section {
   width: 25px;
   background-color: #fff;
   height: 1px;
-  margin: 0.5rem;
+  margin: 7px;
 }
 
 .juniper-title {
-  height: 55vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,10 +140,13 @@ section {
 
 .juniper-title h1 {
   font-size: 5rem;
+  margin-bottom: 1.5rem;
 }
 
 .juniper-title p {
-  font-size: 2rem;
+  font-size: 1.9rem;
+  text-transform: lowercase;
+  color: #abe3e7;
 }
 
 .main-container {
@@ -310,12 +321,28 @@ section {
 }
 
 .featured-container h3 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2.1rem;
+  margin-bottom: 1.2rem;
 }
 
 .featured-container p {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+}
+
+.featured-container i {
+  margin-bottom: 1rem;
+}
+
+.featured-container .cruising {
+  color: #0b2c9f;
+}
+
+.featured-container .gift {
+  color: #00c147;
+}
+
+.featured-container .ts {
+  color: #ff534a;
 }
 
 .pc {
@@ -393,6 +420,10 @@ section {
   padding: 1rem;
 }
 
+.newsletter-container div {
+  margin-bottom: 1.5rem;
+}
+
 .newsletter-container h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -405,6 +436,7 @@ section {
 
 .newsletter-container p {
   font-size: 1.3rem;
+  margin-top: 1.3rem;
   margin-bottom: 1.8rem;
   letter-spacing: 2px;
 }
@@ -420,6 +452,7 @@ section {
   background: #0d86d0;
   padding: 0.4rem;
   border-radius: 10%;
+  margin-bottom: 2rem;
 }
 
 .newsletter-container a:hover {
@@ -440,6 +473,14 @@ section {
   opacity: 0.7;
 }
 
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.2rem;
+}
+
 @media (max-width: 1125px) {
   body {
     overflow-x: hidden;
@@ -457,10 +498,6 @@ section {
             flex-direction: column;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
-    transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
     width: 50%;
   }
   .nav-links a:hover {
@@ -472,6 +509,17 @@ section {
   }
   .burger {
     display: block;
+  }
+  .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-5px, -6px);
   }
 }
 
@@ -486,11 +534,23 @@ section {
   .form {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[5];
-        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .featured-slider {
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+  .featured-slider i {
+    cursor: pointer;
   }
 }
 
